@@ -30,15 +30,13 @@
    difference between send and send2 */
 const size_t BUFLEN = 400000000;
 
-void
-send (register char *to, register char *from, register int count)
+void send (register char *to, register char *from, register int count)
 {
     while (count-- > 0)
         *to++ = *from++;
 }
 
-void
-send2 (register char *to, register char *from, register int count)
+void send2 (register char *to, register char *from, register int count)
 {
     int n = (count+7)/8;
     switch (count % 8) {
